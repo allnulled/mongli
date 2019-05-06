@@ -142,7 +142,7 @@ This is a list of all the commands available and their corresponding options:
 
 `~$ mongli seed undo all`
 
-All the commands accept the `--monglirc` option: string that specifies where to find the `.monglirc` file. By default it is the current working directory.
+All the commands accept the `--monglirc` option: string that specifies where to find the `.monglirc` file. By default it is `.monglirc`, from the current working directory.
 
 ## Writing migrations and seeders
 
@@ -195,10 +195,16 @@ The prefixes of `mongli-` in the config and status are also made for the same re
 
 ## Tests
 
-To run tests, you need to start a mongo server through:
+To run tests, you need to install the dependencies:
+
+`~$ npm install`
+
+Then, to start a mongo server (on port 27017, if not already running) through:
 
 `~$ npm run test:server`
 
 And then from another process:
 
 `~$ npm run test`
+
+The connection will not use any user, but you can alter the connection string of `mongodb` changing the `db/mongli-config.js` file.
