@@ -202,5 +202,3 @@ To run tests, you need to start a mongo server through:
 And then from another process:
 
 `~$ npm run test`
-
-# Read this file

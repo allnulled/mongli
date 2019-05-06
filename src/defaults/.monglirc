@@ -1,0 +1,10 @@
+require("babel-register");
+const path = require("path");
+
+module.exports = {
+	"path-env": undefined, // set your .env file path, used for: process.env.NODE_ENV
+	"path-config": path.resolve(__dirname + "/db/mongli-config.js"),
+	"path-status": path.resolve(__dirname + "/db/mongli-status.json"),
+	"path-migrations": path.resolve(__dirname + "/db/migrations"),
+	"path-seeders": path.resolve(__dirname + "/db/seeders")
+};

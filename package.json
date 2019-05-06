@@ -1,0 +1,31 @@
+{
+  "name": "mongli",
+  "version": "1.0.0",
+  "description": "To manage your MongoDB migrations and seeders from your command line.",
+  "main": "src/mongli.js",
+  "bin": {
+    "mongli": "bin/mongli"
+  },
+  "scripts": {
+    "test:server": "mongod --dbpath test/testing/mongo_database/ --port 27017",
+    "test": "mocha test/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "colorized-logger": "^1.0.3",
+    "fs-extra": "^7.0.1",
+    "just-a-timer": "^1.0.1",
+    "mongodb": "^3.2.3",
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "execute-command-sync": "^1.0.2",
+    "globby": "^9.2.0",
+    "mocha": "^6.1.4",
+    "rimraf": "^2.6.3"
+  }
+}

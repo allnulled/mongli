@@ -1,0 +1,44 @@
+#! /usr/bin/env node
+const path = require("path");
+
+const args = require("yargs")
+	.commandDir(__dirname + "/commands")
+	.usage('Usage: $0 [command] [opts]')
+	.option("monglirc", {
+		type: "string",
+		describe: "Specifies the <.monglirc> initializer file.",
+		demand: false,
+		nargs: 1,
+		default: ".monglirc"
+	})
+	.option("mongli_project_folder", {
+		default: path.resolve(__dirname, ".."),
+		hidden: true
+	})
+	.demandCommand(1, "")
+  .showHelpOnFail(true)
+	.help()
+	.version("0.0.1")
+	.wrap(72)
+	.epilogue(`Available commands:
+  ~$ mongli generate project
+  ~$ mongli generate migration
+  ~$ mongli generate seeder
+  ~$ mongli migrate status
+  ~$ mongli migrate one
+  ~$ mongli migrate all
+  ~$ mongli migrate undo one
+  ~$ mongli migrate undo all
+  ~$ mongli seed status
+  ~$ mongli seed one
+  ~$ mongli seed all
+  ~$ mongli seed undo one
+  ~$ mongli seed undo all
+
+(*) Note: Use option --help with any command for more information about it.
+`)
+	.argv
+
+if(typeof args === "string") {
+	console.log(args);
+}
