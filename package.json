@@ -7,10 +7,16 @@
     "mongli": "bin/mongli"
   },
   "scripts": {
+    "coverage": "node_modules/.bin/rimraf coverage .nyc_output && node_modules/.bin/nyc --reporter=html mocha test/*.test.js",
     "test:server": "mongod --dbpath test/testing/mongo_database/ --port 27017",
     "test": "mocha test/*.test.js"
   },
-  "keywords": [],
+  "keywords": [
+    "mongo",
+    "migration",
+    "seeder",
+    "cli"
+  ],
   "author": "",
   "license": "WTFPL",
   "dependencies": {
@@ -26,6 +32,7 @@
     "execute-command-sync": "^1.0.2",
     "globby": "^9.2.0",
     "mocha": "^6.1.4",
+    "nyc": "^14.1.0",
     "rimraf": "^2.6.3"
   },
   "directories": {
