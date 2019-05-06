@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "WTFPL",
   "dependencies": {
     "babel-register": "^6.26.0",
     "colorized-logger": "^1.0.3",
@@ -27,5 +27,16 @@
     "globby": "^9.2.0",
     "mocha": "^6.1.4",
     "rimraf": "^2.6.3"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allnulled/mongli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allnulled/mongli/issues"
+  },
+  "homepage": "https://github.com/allnulled/mongli#readme"
 }
