@@ -1,5 +1,7 @@
 # mongli
 
+**Do not use this tool. It can work, but once you change the database, the migrations remain.**
+
 ![](https://img.shields.io/badge/mongli-v1.0.0-green.svg) ![](https://img.shields.io/badge/tests-chill-green.svg) ![](https://img.shields.io/badge/coverage-90%25-green.svg) 
 
 To manage your MongoDB migrations and seeders from your command line. Unopinionatedly.
